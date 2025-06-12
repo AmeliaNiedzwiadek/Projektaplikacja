@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/darker_gray"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/textData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textCisnienie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ciśnienie"/>
+
+    <TextView
+        android:id="@+id/textPuls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puls"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/buttonEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edytuj"/>
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Usuń"/>
+    </LinearLayout>
+</LinearLayout>

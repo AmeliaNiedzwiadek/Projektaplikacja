@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_account"
+        android:title="Moje konto" />
+    <item
+        android:id="@+id/nav_measurements"
+        android:title="Pomiary" />
+    <item
+        android:id="@+id/nav_export_csv"
+        android:title="Eksportuj CSV" />
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Powiadomienia"
+        android:icon="@drawable/ic_notification" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Wyloguj się" />
+</menu>

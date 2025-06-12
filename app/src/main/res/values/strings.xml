@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">Projekt</string>
+
+    <!-- Teksty do obsługi DrawerLayout -->
+    <string name="navigation_drawer_open">Otwórz menu nawigacji</string>
+    <string name="navigation_drawer_close">Zamknij menu nawigacji</string>
+
+    <!-- Etykiety zakładek menu bocznego -->
+    <string name="menu_home">Strona główna</string>
+    <string name="menu_account">Moje konto</string>
+    <string name="menu_measurements">Pomiary</string>
+    <string name="menu_export">Eksport CSV</string>
+    <string name="menu_logout">Wyloguj się</string>
+
+    <!-- Etykiety dla AccountActivity -->
+    <string name="email_label">Email:</string>
+    <string name="gender_label">Płeć</string>
+    <string name="weight_label">Waga (kg)</string>
+    <string name="height_label">Wzrost (cm)</string>
+    <string name="age_label">Wiek</string>
+    <string name="notes_label">Uwagi</string>
+
+    <string name="reset_password_button">Resetuj hasło</string>
+
+    <string name="gender_female">Kobieta</string>
+    <string name="gender_male">Mężczyzna</string>
+    <string name="gender_other">Inne</string>
+
+    <!-- Komunikaty -->
+    <string name="not_logged_in">Nie jesteś zalogowany</string>
+    <string name="data_saved">Dane zostały zapisane</string>
+    <string name="data_save_error">Błąd podczas zapisywania danych</string>
+    <string name="data_load_error">Błąd podczas wczytywania danych</string>
+    <string name="password_reset_sent">Wysłano mail do %1$s z instrukcjami resetu hasła</string>
+    <string name="password_reset_error">Błąd podczas wysyłania maila resetującego hasło</string>
+
+    <string name="edit_button">Edytuj dane</string>
+    <string name="save_button">Zapisz dane</string>
 </resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="time_ranges">
+        <item>Dzień</item>
+        <item>Tydzień</item>
+        <item>Miesiąc</item>
+        <item>Rok</item>
+        <item>Godzina</item>
+    </string-array>
+</resources>

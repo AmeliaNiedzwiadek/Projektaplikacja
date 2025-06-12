@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addMeasurementLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/inputData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data (np. 2025-06-11 10:00)" />
+
+    <EditText
+        android:id="@+id/inputSkurczowe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ciśnienie skurczowe"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/inputRozkurczowe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ciśnienie rozkurczowe"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/inputPuls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Puls"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSaveMeasurement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

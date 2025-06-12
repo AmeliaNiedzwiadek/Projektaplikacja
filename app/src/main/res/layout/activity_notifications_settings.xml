@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:id="@+id/switchEnableNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Włącz powiadomienia" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Godziny przypomnień:"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Kontener na dynamicznie dodawane TimePickery -->
+        <LinearLayout
+            android:id="@+id/timeListLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonAddTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dodaj godzinę"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/buttonSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz ustawienia"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>
