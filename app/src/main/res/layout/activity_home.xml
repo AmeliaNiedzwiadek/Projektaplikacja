@@ -5,52 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Główna zawartość ekranu z Toolbar -->
+    <!-- Główna zawartość -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@android:color/white">
+        android:background="@drawable/background_gradient">
 
-        <!-- Toolbar na górze -->
+        <!-- Toolbar (ciemnoczerwony) -->
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:titleTextColor="@android:color/white"
-            app:title="Pomiary" />
+            android:background="#7C0101"
+            android:title="Pomiary"
+            android:titleTextColor="@android:color/white" />
 
-        <!-- Reszta ekranu -->
+        <!-- Wnętrze -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="24dp">
 
             <Button
                 android:id="@+id/buttonAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dodaj pomiar"
+                android:textColor="#FFFFFF"
+                android:background="#7C0303"
                 android:layout_marginBottom="16dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:paddingTop="8dp" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Nawigacja boczna (menu) -->
+    <!-- Nawigacja boczna -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/drawer_menu"
-        android:background="@android:color/white" />
-
+        android:background="#FFFFFF" />
 </androidx.drawerlayout.widget.DrawerLayout>
