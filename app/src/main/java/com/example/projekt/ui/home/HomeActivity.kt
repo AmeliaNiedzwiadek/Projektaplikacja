@@ -84,16 +84,6 @@ class HomeActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
-                R.id.nav_measurements -> {
-                    Toast.makeText(this, "Pomiary", Toast.LENGTH_SHORT).show()
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    true
-                }
-                R.id.nav_export_csv -> {
-                    Toast.makeText(this, "Eksport CSV", Toast.LENGTH_SHORT).show()
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    true
-                }
                 R.id.nav_notifications -> {
                     startActivity(Intent(this, NotificationsSettingsActivity::class.java))
                     drawerLayout.closeDrawer(GravityCompat.START)

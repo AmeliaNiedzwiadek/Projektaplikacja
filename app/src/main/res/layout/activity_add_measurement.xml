@@ -4,39 +4,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
 
+    <!-- Data i godzina (otwiera DatePicker + TimePicker) -->
     <EditText
         android:id="@+id/inputData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Data (np. 2025-06-11 10:00)" />
+        android:hint="Data i godzina"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:drawableRight="@android:drawable/ic_menu_my_calendar" />
 
+    <!-- Ciśnienie skurczowe -->
     <EditText
         android:id="@+id/inputSkurczowe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ciśnienie skurczowe"
-        android:inputType="number" />
+        android:inputType="number"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
+    <!-- Ciśnienie rozkurczowe -->
     <EditText
         android:id="@+id/inputRozkurczowe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ciśnienie rozkurczowe"
-        android:inputType="number" />
+        android:inputType="number"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
+    <!-- Puls -->
     <EditText
         android:id="@+id/inputPuls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Puls"
-        android:inputType="number" />
+        android:inputType="number"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
+    <!-- Zapisz -->
     <Button
         android:id="@+id/buttonSaveMeasurement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Zapisz"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:background="#800000" />
 </LinearLayout>
