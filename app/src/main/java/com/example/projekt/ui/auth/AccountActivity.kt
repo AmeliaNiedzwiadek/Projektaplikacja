@@ -113,6 +113,15 @@ class AccountActivity : AppCompatActivity() {
             return
         }
 
+        if (weight !in 1.0..300.0 || height !in 30..300 || age !in 1..100) {
+            Toast.makeText(
+                this,
+                "Wprowadź realistyczne dane:\n- Waga: < 300 kg\n- Wzrost: < 300 cm\n- Wiek: < 100 lat",
+                Toast.LENGTH_LONG
+            ).show()
+            return
+        }
+
         val data = hashMapOf(
             "gender" to gender,
             "weight" to weight,
