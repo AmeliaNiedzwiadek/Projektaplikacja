@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/projekt/ui/screens/AddMeasurementActivity.kt
 package com.example.projekt.ui.screens
 
 import android.app.DatePickerDialog
@@ -77,6 +76,20 @@ class AddMeasurementActivity : AppCompatActivity() {
         }
         if (data.isBlank() || skurczowe == null || rozkurczowe == null || puls == null) {
             Toast.makeText(this, "Uzupełnij wszystkie dane!", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // WALIDACJA PULSU I CIŚNIEŃ
+        if (puls !in 40..200) {
+            Toast.makeText(this, "Puls musi być w zakresie 40 - 200", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (skurczowe !in 80..200) {
+            Toast.makeText(this, "Ciśnienie skurczowe musi być w zakresie 80 - 200", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (rozkurczowe !in 40..130) {
+            Toast.makeText(this, "Ciśnienie rozkurczowe musi być w zakresie 40 - 130", Toast.LENGTH_SHORT).show()
             return
         }
 

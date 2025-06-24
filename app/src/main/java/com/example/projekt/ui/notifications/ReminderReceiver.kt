@@ -15,13 +15,11 @@ class ReminderReceiver : BroadcastReceiver() {
 
     companion object {
         const val CHANNEL_ID = "measurement_reminder_channel"
-        const val NOTIFICATION_ID = 1
     }
 
     override fun onReceive(context: Context, intent: Intent) {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        // Tworzymy kanał powiadomień (od Androida 8+)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
@@ -33,7 +31,6 @@ class ReminderReceiver : BroadcastReceiver() {
             notificationManager.createNotificationChannel(channel)
         }
 
-        // Kliknięcie w powiadomienie otworzy HomeActivity
         val intentToOpen = Intent(context, HomeActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(
             context,
@@ -42,8 +39,10 @@ class ReminderReceiver : BroadcastReceiver() {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        val notificationId = intent.getIntExtra("notification_id", 0)
+
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notification)  // Podmień na własną ikonę
+            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("Przypomnienie o pomiarze")
             .setContentText("Nie zapomnij wykonać dzisiejszego pomiaru!")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -51,6 +50,7 @@ class ReminderReceiver : BroadcastReceiver() {
             .setAutoCancel(true)
             .build()
 
-        notificationManager.notify(NOTIFICATION_ID, notification)
+        notificationManager.notify(notificationId, notification)
     }
 }
+

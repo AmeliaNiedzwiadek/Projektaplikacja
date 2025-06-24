@@ -95,7 +95,6 @@ class NotificationsSettingsActivity : AppCompatActivity() {
         timePicker.setIs24HourView(true)
         timePicker.hour = hour
         timePicker.minute = minute
-        // Margines między TimePickerami
         val params = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
@@ -122,10 +121,13 @@ class NotificationsSettingsActivity : AppCompatActivity() {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         times.forEachIndexed { index, (hour, minute) ->
-            val intent = Intent(this, ReminderReceiver::class.java)
+            val intent = Intent(this, ReminderReceiver::class.java).apply {
+                putExtra("notification_id", index)  // WAŻNE: unikalny ID powiadomienia
+            }
+
             val pendingIntent = PendingIntent.getBroadcast(
                 this,
-                index, // różne requestCode aby alarmy się nie nadpisywały
+                index,
                 intent,
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )

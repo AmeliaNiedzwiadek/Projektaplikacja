@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/projekt/ui/screens/EditMeasurementActivity.kt
 package com.example.projekt.ui.screens
 
 import android.os.Bundle
@@ -65,6 +64,20 @@ class EditMeasurementActivity : AppCompatActivity() {
 
         if (newData.isBlank() || newSk == null || newRoz == null || newPuls == null) {
             Toast.makeText(this, "Uzupełnij wszystkie pola!", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // WALIDACJA PULSU I CIŚNIEŃ
+        if (newPuls !in 40..200) {
+            Toast.makeText(this, "Puls musi być w zakresie 40 - 200", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (newSk !in 80..200) {
+            Toast.makeText(this, "Ciśnienie skurczowe musi być w zakresie 80 - 200", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (newRoz !in 40..130) {
+            Toast.makeText(this, "Ciśnienie rozkurczowe musi być w zakresie 40 - 130", Toast.LENGTH_SHORT).show()
             return
         }
 
